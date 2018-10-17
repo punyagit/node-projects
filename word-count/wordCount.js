@@ -1,21 +1,16 @@
 var fs = require('fs');
 // reading file synchronomously
-var readMe1 = fs.readFileSync('file.txt', 'utf8');
-var readMe = readMe1.toLowerCase()
-console.log(readMe)
+var readFile = fs.readFileSync('file.txt', 'utf8');
+var readFileLowerCase = readFile.toLowerCase()
 var wordsToFind = "node";
 
-
-
-
 function countWord(word){
-  if (readMe.indexOf(word) >= 0) { 
-    console.log("hey")
+  if (readFileLowerCase.indexOf(word) >= 0) { 
+    console.log("I found the word")
   } else { 
-    console.log('No');
+    console.log('No Word is Found');
   }
 }
-
 
 function mult(file) {
   //console.log(...args)
@@ -29,6 +24,6 @@ function mult(file) {
   return mult(file.slice(sliceNum + 1))
 }
 //console.log(readMe);
-mult(readMe)
+mult(readFileLowerCase)
 countWord(wordsToFind);
 
