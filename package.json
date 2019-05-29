@@ -1,0 +1,26 @@
+{
+  "name": "node_project",
+  "version": "1.0.0",
+  "description": "Some small node projects to understand node and make better use of it",
+  "main": "createBigFile.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@google/maps": "^0.5.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PunyaChapagain/node-projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PunyaChapagain/node-projects/issues"
+  },
+  "homepage": "https://github.com/PunyaChapagain/node-projects#readme"
+}
