@@ -21,25 +21,23 @@ let destinations = [
 
 Promise.all(destinations.map(destination => Promise.all(destination.map(findDifference)))).then(console.log)
 
+function findDifference(obj) {
+    return new Promise((resolve, reject) => {
+        resolve(obj.origin + obj.destination)
+    })
+}
 
-// let promisesArray = destinations.map(destination => {
-//     return new Promise((resolve, reject) => {
-//         resolve(destination.map(obj => {
-//             return new Promise((resolve, reject) => {
-//                 findDifference(obj)
-//                     .then(data => resolve(data))
-//             })
-
-//         }))
-
-
-//     })
-
+// let promisesArray = destinations.map(array => new Promise((resolve, reject) => {
+//     Promise.all(array.map(element => findDifference(element)))
+//         .then(resolve)
+//         .catch(reject)
 // })
+// )
+
 
 // Promise.all(promisesArray)
 //     .then(function (results) {
-//         console.log(results[0][0].Promise)
+//         console.log(results)
 //     })
 //     .catch(function (error) {
 //         console.log(error)
@@ -47,8 +45,3 @@ Promise.all(destinations.map(destination => Promise.all(destination.map(findDiff
 
 
 
-function findDifference(obj) {
-    return new Promise((resolve, reject) => {
-        resolve(obj.origin + obj.destination)
-    })
-}
