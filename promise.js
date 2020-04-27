@@ -27,6 +27,9 @@ function findDifference(obj) {
     })
 }
 
+
+
+
 // let promisesArray = destinations.map(array => new Promise((resolve, reject) => {
 //     Promise.all(array.map(element => findDifference(element)))
 //         .then(resolve)
